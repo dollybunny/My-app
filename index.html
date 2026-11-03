@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-accent="teal">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>مصروفي</title>
+  <meta name="description" content="مصروفي: تتبّع مصروفاتك، حقّق أهدافك، ووفّر بذكاء.">
+  <meta name="theme-color" content="#0d9488">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <!-- أيقونات -->
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+  <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+
+  <!-- iOS / Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="مصروفي">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- الخط (يُخزَّن تلقائياً للعمل دون إنترنت بعد أول زيارة) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app" class="app">
+
+    <!-- شاشة الترحيب -->
+    <section id="welcome" class="welcome" hidden>
+      <span class="bubble b1"></span><span class="bubble b2"></span><span class="bubble b3"></span>
+      <div class="welcome-body">
+        <div class="welcome-logo" id="welcomeLogo"></div>
+        <h1>مصروفي</h1>
+        <p>تتبع مصروفاتك، حقق أهدافك، ووفّر بذكاء</p>
+        <button class="btn white" id="startBtn" type="button"><span id="startArrow"></span> ابدأ الآن</button>
+      </div>
+      <footer>إدارة مالية ذكية</footer>
+    </section>
+
+    <!-- هيكل التطبيق -->
+    <div id="shell" class="shell" hidden>
+      <header class="topbar">
+        <span class="logo" id="topLogo"></span>
+        <h1>مصروفي</h1>
+      </header>
+      <main id="view" class="view" tabindex="-1"></main>
+      <nav id="tabbar" class="tabbar" aria-label="التنقل الرئيسي"></nav>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </div>
+
+  <noscript>يحتاج التطبيق إلى تفعيل جافاسكربت ليعمل.</noscript>
+  <script src="js/app.js"></script>
+</body>
+</html>
